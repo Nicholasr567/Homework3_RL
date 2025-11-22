@@ -1,0 +1,23 @@
+{
+    "name": "Aerial Robotics Lab",
+    "build": {
+        "dockerfile": "../Dockerfile/dockerFile_RL_aerialRobotics_humble_harmonic",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-iot.vscode-ros"
+            ]
+        }
+    },
+    "runArgs": [
+        "--net=host",
+        "--privileged",
+        "--env=DISPLAY",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix"
+    ],
+    "remoteUser": "root"
+}
