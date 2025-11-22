@@ -1,0 +1,24 @@
+# Cartelle di build ROS 2
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Cartelle di build PX4 (nel caso ricompili)
+PX4-Autopilot/build/
+PX4-Autopilot/Tools/simulation/gz/root/
+
+# File binari e oggetti
+*.o
+*.so
+*.a
+*.bin
+
+# Rosbag 
+*.mcap
+*.bag
+
+# File temporanei e IDE
+.vscode/
+.idea/
+*.swp
+*~
