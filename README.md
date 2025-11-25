@@ -244,3 +244,32 @@ Make sure the trajectory:
 -   has at least 7 waypoints;
 
 -   does not stop the drone at intermediate waypoints (only at the end velocity should be 0 m/s).
+
+
+## Modified PX4 Files for This Homework
+
+The **PX4-Autopilot** repository included in this project has been modified to bypass issues that prevented its correct integration into the workspace.  
+Below is the list of file paths and custom additions required for the completion of this Homework:
+
+-   A new airframe `4002_gz_my_x500` was added to:
+
+    ```
+    aerial_robotics-master/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/
+    ```
+
+-   A custom Gazebo model for `my_x500` was added (containing `model.sdf` and `model.config`) in:
+
+    ```
+    aerial_robotics-master/PX4-Autopilot/Tools/simulation/gz/models/
+    ```
+
+-   The main PX4 build configuration file `CMakeLists.txt` was modified.
+    ```
+    aerial_robotics-master/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/CMakeLists.txt
+    ```
+-   An additional modification was made to the DDS interface definition file:
+
+    ```
+    aerial_robotics-master/PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml
+    ```
+
